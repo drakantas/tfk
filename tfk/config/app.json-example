@@ -1,0 +1,17 @@
+{
+  "NAME": "Archivum",
+  "TITLE": "The Forgotten Kings",
+  "HOST": "127.0.0.1",
+  "PORT": 80,
+  "WORKERS": 1,
+  "DB": {
+    "HOST": "127.0.0.1",
+    "PORT": 5432,
+    "DATABASE_NAME": "tfk",
+    "USER": {
+      "NAME": "postgres",
+      "PASSWORD": ""
+    },
+    "SCHEMA": "public"
+  }
+}

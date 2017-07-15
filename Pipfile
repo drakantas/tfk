@@ -6,3 +6,6 @@ verify_ssl = true
 sanic = "*"
 alembic = "*"
 asyncpg = "*"
+psycopg2 = "*"
+ryoken = "*"
+bcrypt = "*"

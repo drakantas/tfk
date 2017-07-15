@@ -1,12 +1,10 @@
-from sanic import Sanic
-from sanic.response import json
+from sanic.config import LOGGING
+from tfk.foundation import bootstrap
 
-app = Sanic()
+app = bootstrap()
 
+LOGGING['loggers']['network']['handlers'] = ['accessTimedRotatingFile', 'errorTimedRotatingFile']
 
-@app.route("/")
-async def test(request):
-    return json({"hello": "world"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host=app.config.HOST, port=app.config.PORT, workers=app.config.WORKERS, log_config=LOGGING, debug=True)
